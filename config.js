@@ -35,8 +35,8 @@ module.exports = {
   HANDLERS: process.env.HANDLERS === undefined ? "^[.]" : process.env.HANDLERS,
   SEND_READ:
     process.env.SEND_READ === undefined
-      ? false
-      : convertToBool(process.env.SEND_READ),
+      ? true
+      : convertToBool(process.env.SEND_READ),true
   BRANCH: "master",
   HEROKU: {
     HEROKU:
@@ -73,9 +73,9 @@ module.exports = {
         }),
   NO_ONLINE:
     process.env.NO_ONLINE === undefined
-      ? true
+    true  ? true
       : convertToBool(process.env.NO_ONLINE),
-  CLR_SESSION:
+  CLR_SESSION:true
     process.env.CLR_SESSION === undefined
       ? false
       : convertToBool(process.env.CLR_SESSION),
